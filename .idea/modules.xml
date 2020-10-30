@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/SpringCloudAlibaba.iml" filepath="$PROJECT_DIR$/.idea/SpringCloudAlibaba.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-cloud-alibaba/cloud-business/c-demo-center/c-demo-center.iml" filepath="$PROJECT_DIR$/spring-cloud-alibaba/cloud-business/c-demo-center/c-demo-center.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-cloud-alibaba/c-gateway/c-gateway.iml" filepath="$PROJECT_DIR$/spring-cloud-alibaba/c-gateway/c-gateway.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-cloud-alibaba/cloud-business/c-user-center/c-user-center.iml" filepath="$PROJECT_DIR$/spring-cloud-alibaba/cloud-business/c-user-center/c-user-center.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-cloud-alibaba/cloud-business/cloud-business.iml" filepath="$PROJECT_DIR$/spring-cloud-alibaba/cloud-business/cloud-business.iml" />
