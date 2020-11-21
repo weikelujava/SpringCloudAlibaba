@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/spring-cloud-alibaba/c-auto-generator/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-cloud-alibaba/c-auto-generator/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-cloud-alibaba/c-gateway/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-cloud-alibaba/cloud-business/c-demo-center/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-cloud-alibaba/cloud-business/c-demo-center/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-cloud-alibaba/cloud-business/c-user-center/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/spring-cloud-alibaba/cloud-config/src/main/resources/application.yml" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/spring-cloud-alibaba/cloud-business/c-user-center/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-cloud-alibaba/cloud-config/src/main/resources" charset="UTF-8" />
   </component>
 </project>

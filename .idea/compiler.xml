@@ -12,26 +12,30 @@
         <module name="c-gateway" />
         <module name="c-user-center" />
         <module name="c-demo-center" />
+        <module name="c-auto-generator" />
         <module name="cloud-config" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="c-auto-generator" target="1.8" />
+      <module name="c-cloud-business" target="1.8" />
       <module name="c-demo-center" target="1.8" />
       <module name="c-gateway" target="1.8" />
       <module name="c-user-center" target="1.8" />
-      <module name="cloud-business" target="1.8" />
       <module name="cloud-commons" target="1.8" />
       <module name="cloud-config" target="1.8" />
       <module name="cloud-gateway" target="1.8" />
       <module name="spring-cloud-alibaba" target="1.8" />
+      <module name="spring-cloud-alibaba (1)" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="c-auto-generator" options="-parameters" />
+      <module name="c-cloud-business" options="-parameters" />
       <module name="c-demo-center" options="-parameters" />
       <module name="c-gateway" options="-parameters" />
       <module name="c-user-center" options="-parameters" />
-      <module name="cloud-business" options="-parameters" />
       <module name="cloud-commons" options="-parameters" />
       <module name="cloud-config" options="-parameters" />
       <module name="cloud-gateway" options="-parameters" />

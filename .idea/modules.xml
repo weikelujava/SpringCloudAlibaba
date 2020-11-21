@@ -3,14 +3,14 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/SpringCloudAlibaba.iml" filepath="$PROJECT_DIR$/.idea/SpringCloudAlibaba.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-cloud-alibaba/c-auto-generator/c-auto-generator.iml" filepath="$PROJECT_DIR$/spring-cloud-alibaba/c-auto-generator/c-auto-generator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-cloud-alibaba/cloud-business/c-cloud-business.iml" filepath="$PROJECT_DIR$/spring-cloud-alibaba/cloud-business/c-cloud-business.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-cloud-alibaba/cloud-business/c-demo-center/c-demo-center.iml" filepath="$PROJECT_DIR$/spring-cloud-alibaba/cloud-business/c-demo-center/c-demo-center.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-cloud-alibaba/c-gateway/c-gateway.iml" filepath="$PROJECT_DIR$/spring-cloud-alibaba/c-gateway/c-gateway.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-cloud-alibaba/cloud-business/c-user-center/c-user-center.iml" filepath="$PROJECT_DIR$/spring-cloud-alibaba/cloud-business/c-user-center/c-user-center.iml" />
-      <module fileurl="file://$PROJECT_DIR$/spring-cloud-alibaba/cloud-business/cloud-business.iml" filepath="$PROJECT_DIR$/spring-cloud-alibaba/cloud-business/cloud-business.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-cloud-alibaba/cloud-commons/cloud-commons.iml" filepath="$PROJECT_DIR$/spring-cloud-alibaba/cloud-commons/cloud-commons.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-cloud-alibaba/cloud-config/cloud-config.iml" filepath="$PROJECT_DIR$/spring-cloud-alibaba/cloud-config/cloud-config.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-cloud-alibaba/cloud-gateway/cloud-gateway.iml" filepath="$PROJECT_DIR$/spring-cloud-alibaba/cloud-gateway/cloud-gateway.iml" />
-      <module fileurl="file://$PROJECT_DIR$/spring-cloud-alibaba/spring-cloud-alibaba.iml" filepath="$PROJECT_DIR$/spring-cloud-alibaba/spring-cloud-alibaba.iml" />
     </modules>
   </component>
 </project>

@@ -9,6 +9,7 @@
         <module>cloud-commons</module>
         <module>cloud-business</module>
         <module>c-gateway</module>
+        <module>c-auto-generator</module>
     </modules>
     <parent>
         <artifactId>spring-boot-starter-parent</artifactId>
