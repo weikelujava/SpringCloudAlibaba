@@ -3,3 +3,7 @@ server:
 spring:
   application:
     name: c-user-center
+
+
+logging:
+  config: classpath:logback-spring.xml
