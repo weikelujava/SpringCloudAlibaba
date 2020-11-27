@@ -7,9 +7,10 @@
     <modules>
         <module>cloud-config</module>
         <module>cloud-commons</module>
-        <module>cloud-business</module>
+        <module>c-cloud-business</module>
         <module>c-gateway</module>
         <module>c-auto-generator</module>
+        <module>c-big-data</module>
     </modules>
     <parent>
         <artifactId>spring-boot-starter-parent</artifactId>
