@@ -11,6 +11,7 @@
         <module>c-gateway</module>
         <module>c-auto-generator</module>
         <module>c-big-data</module>
+        <module>c-algorithm</module>
     </modules>
     <parent>
         <artifactId>spring-boot-starter-parent</artifactId>
