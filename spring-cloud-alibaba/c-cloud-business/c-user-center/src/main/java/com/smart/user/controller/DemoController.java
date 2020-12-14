@@ -11,7 +11,6 @@ import java.net.URISyntaxException;
 import java.nio.charset.StandardCharsets;
 
 /**
- * All rights Reserved, Designed By http://www.hollysmart.com.cn
  *
  * @version V1.0
  * @title: DemoController

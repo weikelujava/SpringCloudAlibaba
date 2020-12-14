@@ -3,7 +3,6 @@ package com.smart.demo.upload.controller;
 import com.smart.demo.qrcode.config.QrCodeUtils;
 
 /**
- * All rights Reserved, Designed By http://www.hollysmart.com.cn
  *
  * @version V1.0
  * @title: BytesConvertMultipartFile
