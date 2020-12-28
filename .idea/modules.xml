@@ -9,6 +9,7 @@
       <module fileurl="file://$PROJECT_DIR$/spring-cloud-alibaba/c-cloud-business/c-cloud-business.iml" filepath="$PROJECT_DIR$/spring-cloud-alibaba/c-cloud-business/c-cloud-business.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-cloud-alibaba/c-cloud-business/c-demo-center/c-demo-center.iml" filepath="$PROJECT_DIR$/spring-cloud-alibaba/c-cloud-business/c-demo-center/c-demo-center.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-cloud-alibaba/c-gateway/c-gateway.iml" filepath="$PROJECT_DIR$/spring-cloud-alibaba/c-gateway/c-gateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-cloud-alibaba/c-cloud-business/c-search-center/c-search-center.iml" filepath="$PROJECT_DIR$/spring-cloud-alibaba/c-cloud-business/c-search-center/c-search-center.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-cloud-alibaba/c-cloud-business/c-user-center/c-user-center.iml" filepath="$PROJECT_DIR$/spring-cloud-alibaba/c-cloud-business/c-user-center/c-user-center.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-cloud-alibaba/cloud-commons/cloud-commons.iml" filepath="$PROJECT_DIR$/spring-cloud-alibaba/cloud-commons/cloud-commons.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-cloud-alibaba/cloud-config/cloud-config.iml" filepath="$PROJECT_DIR$/spring-cloud-alibaba/cloud-config/cloud-config.iml" />

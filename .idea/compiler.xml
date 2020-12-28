@@ -15,6 +15,7 @@
         <module name="c-auto-generator" />
         <module name="c-big-data" />
         <module name="c-algorithm" />
+        <module name="c-search-center" />
         <module name="cloud-config" />
       </profile>
     </annotationProcessing>
@@ -26,6 +27,7 @@
       <module name="c-cloud-business" target="1.8" />
       <module name="c-demo-center" target="1.8" />
       <module name="c-gateway" target="1.8" />
+      <module name="c-search-center" target="1.8" />
       <module name="c-user-center" target="1.8" />
       <module name="cloud-commons" target="1.8" />
       <module name="cloud-config" target="1.8" />
@@ -43,6 +45,7 @@
       <module name="c-cloud-business" options="-parameters" />
       <module name="c-demo-center" options="-parameters" />
       <module name="c-gateway" options="-parameters" />
+      <module name="c-search-center" options="-parameters" />
       <module name="c-user-center" options="-parameters" />
       <module name="cloud-commons" options="-parameters" />
       <module name="cloud-config" options="-parameters" />

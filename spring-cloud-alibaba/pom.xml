@@ -29,6 +29,12 @@
         <lombok.version>1.18.12</lombok.version>
         <spring-boot-maven-plugin.version>2.2.5.RELEASE</spring-boot-maven-plugin.version>
         <spring-cloud-starter-gateway.version>2.2.5.RELEASE</spring-cloud-starter-gateway.version>
+        <spring-boot-starter-data-elasticesearch.version>2.1.16.RELEASE</spring-boot-starter-data-elasticesearch.version>
+        <spring-boot-configuration-processor.version>2.1.16.RELEASE</spring-boot-configuration-processor.version>
+        <mysql-connector-java.version>8.0.21</mysql-connector-java.version>
+        <druid-spring-boot-starter.version>1.1.22</druid-spring-boot-starter.version>
+        <spring-jdbc.version>5.2.9.RELEASE</spring-jdbc.version>
+        <mybatis-plus.version>3.4.0</mybatis-plus.version>
     </properties>
 
 
@@ -54,6 +60,8 @@
                 <artifactId>spring-cloud-starter-gateway</artifactId>
                 <version>${spring-cloud-starter-gateway.version}</version>
             </dependency>
+
+            <!-- Nacos -->
             <dependency>
                 <groupId>com.alibaba.cloud</groupId>
                 <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
@@ -64,11 +72,52 @@
                 <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
                 <version>2.1.2.RELEASE</version>
             </dependency>
+
+            <!--SpringBoot Starter-->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-web</artifactId>
                 <version>${spring-boot-starter-web.version}</version>
             </dependency>
+            <!-- SpringBoot获取配置文件的方式，通常使用@Value获取配置文件的形式，也可以使用这种配置-->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-configuration-processor</artifactId>
+                <version>${spring-boot-configuration-processor.version}</version>
+            </dependency>
+
+            <!-- ElasticSearch -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-data-elasticsearch</artifactId>
+                <version>${spring-boot-starter-data-elasticesearch.version}</version>
+            </dependency>
+
+            <!-- MySQL-->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid-spring-boot-starter</artifactId>
+                <version>${druid-spring-boot-starter.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql-connector-java.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-jdbc</artifactId>
+                <version>${spring-jdbc.version}</version>
+            </dependency>
+
+            <!-- Mybatis -->
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus</artifactId>
+                <version>${mybatis-plus.version}</version>
+            </dependency>
+
+            <!-- Lombok plugin-->
             <dependency>
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok</artifactId>

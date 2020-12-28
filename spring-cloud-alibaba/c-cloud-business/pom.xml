@@ -14,5 +14,6 @@
     <modules>
         <module>c-user-center</module>
         <module>c-demo-center</module>
+        <module>c-search-center</module>
     </modules>
 </project>
