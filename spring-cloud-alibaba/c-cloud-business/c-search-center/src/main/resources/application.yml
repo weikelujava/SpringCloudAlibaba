@@ -33,6 +33,6 @@ spring:
       connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
 
 mybatis-plus:
-  config-location: classpath:/mapper/*Mapper.xml
+  mapper-locations: classpath:/mapper/*Mapper.xml
   typeAliasesPackage: com.smart.search.bean
 
