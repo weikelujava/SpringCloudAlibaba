@@ -1,7 +1,7 @@
 package com.smart.search.repository;
 
 import com.smart.search.bean.User;
-import org.springframework.data.elasticsearch.repository.ElasticsearchCrudRepository;
+import org.springframework.data.elasticsearch.repository.ElasticsearchRepository;
 import org.springframework.stereotype.Repository;
 
 /**
@@ -15,6 +15,6 @@ import org.springframework.stereotype.Repository;
  * @remark: 修改内容
  */
 @Repository
-public interface TUserRepository extends ElasticsearchCrudRepository<User,Long> {
+public interface TUserRepository extends ElasticsearchRepository<User,Long> {
 
 }

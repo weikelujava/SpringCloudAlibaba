@@ -62,6 +62,13 @@
             <version>3.4.0</version>
         </dependency>
 
+        <!-- 将迭代器转成List-->
+        <dependency>
+            <groupId>commons-collections</groupId>
+            <artifactId>commons-collections</artifactId>
+            <version>3.2.2</version>
+        </dependency>
+
         <dependency>
             <groupId>cn.hutool</groupId>
             <artifactId>hutool-all</artifactId>

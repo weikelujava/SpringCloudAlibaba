@@ -3,6 +3,7 @@ package com.smart.search.service.impl;
 import cn.hutool.core.util.IdUtil;
 import com.smart.search.bean.User;
 import com.smart.search.mapper.UserMapper;
+import com.smart.search.repository.TUserRepository;
 import com.smart.search.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -22,6 +23,8 @@ import java.util.Date;
 @Service
 public class UserServiceImpl extends SuperServiceImpl<UserMapper,User> implements UserService {
 
+    @Autowired
+    private TUserRepository tUserRepository;
 
     @Override
     public User findUserById(Long id) {
@@ -33,6 +36,10 @@ public class UserServiceImpl extends SuperServiceImpl<UserMapper,User> implement
         long id = IdUtil.createSnowflake(1, 1).nextId();
         user.setId(id);
         user.setLoginTime(new Date());
-        return baseMapper.insertUser(user);
+        Long userId = baseMapper.insertUser(user);
+        if(userId > 0){
+            tUserRepository.save(user);
+        }
+        return userId;
     }
 }

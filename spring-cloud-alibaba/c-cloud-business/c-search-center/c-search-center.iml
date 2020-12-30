@@ -134,6 +134,7 @@
     <orderEntry type="library" name="Maven: com.baomidou:mybatis-plus-boot-starter:3.4.0" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-jdbc:2.1.6.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: com.zaxxer:HikariCP:3.2.0" level="project" />
+    <orderEntry type="library" name="Maven: commons-collections:commons-collections:3.2.2" level="project" />
     <orderEntry type="library" name="Maven: cn.hutool:hutool-all:5.1.4" level="project" />
   </component>
 </module>

@@ -56,5 +56,17 @@ public class StreamListController {
         return map2;
     }
 
+    @GetMapping("/stream/list-to-map")
+    public Object listConvertToMap(){
+
+        List<Product> list = Arrays.asList(new Product(11311,10342),
+                new Product(11324,10343));
+
+        Map<Integer, Integer> map = list.stream().collect(Collectors.toMap(Product::getId, Product::getCategoryId));
+        log.info(map.toString());
+
+        return map;
+    }
+
 
 }
