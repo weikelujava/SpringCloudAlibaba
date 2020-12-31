@@ -1,4 +1,4 @@
-package com.smart.flume;
+package com.smart.data.flume;
 
 import org.apache.flume.*;
 import org.apache.flume.conf.Configurable;
