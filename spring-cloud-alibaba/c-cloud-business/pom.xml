@@ -7,13 +7,14 @@
         <groupId>com.smart</groupId>
         <version>1.0.0</version>
     </parent>
-    <modelVersion>4.0.0</modelVersion>
 
+    <modelVersion>4.0.0</modelVersion>
     <artifactId>c-cloud-business</artifactId>
     <packaging>pom</packaging>
     <modules>
         <module>c-user-center</module>
         <module>c-demo-center</module>
         <module>c-search-center</module>
+        <module>c-data-center</module>
     </modules>
 </project>

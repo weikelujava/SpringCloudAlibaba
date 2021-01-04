@@ -2,8 +2,8 @@
 <configuration debug="false" scan="false">
 
     <!-- Log file path -->
-<!--    <property name="log.path" value="E:/home/logs/seq-test" />-->
-    <property name="log.path" value="/application/logs/" />
+    <property name="log.path" value="E:/java/logs/" />
+<!--    <property name="log.path" value="/application/logs/" />-->
 
     <!-- Console log output -->
     <appender name="console"
