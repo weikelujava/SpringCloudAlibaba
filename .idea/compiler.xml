@@ -9,6 +9,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="cloud-gateway" />
         <module name="cloud-commons" />
+        <module name="c-data-center" />
         <module name="c-gateway" />
         <module name="c-user-center" />
         <module name="c-demo-center" />
@@ -25,6 +26,7 @@
       <module name="c-auto-generator" target="1.8" />
       <module name="c-big-data" target="1.8" />
       <module name="c-cloud-business" target="1.8" />
+      <module name="c-data-center" target="1.8" />
       <module name="c-demo-center" target="1.8" />
       <module name="c-gateway" target="1.8" />
       <module name="c-search-center" target="1.8" />
@@ -43,6 +45,7 @@
       <module name="c-auto-generator" options="-parameters" />
       <module name="c-big-data" options="-parameters" />
       <module name="c-cloud-business" options="-parameters" />
+      <module name="c-data-center" options="-parameters" />
       <module name="c-demo-center" options="-parameters" />
       <module name="c-gateway" options="-parameters" />
       <module name="c-search-center" options="-parameters" />

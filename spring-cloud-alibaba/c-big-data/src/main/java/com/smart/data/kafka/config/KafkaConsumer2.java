@@ -25,7 +25,7 @@ import java.util.Optional;
 @Component
 public class KafkaConsumer2 {
 
-    @KafkaListener(topics = "bill_topic",groupId = "bill_groupId")
+//    @KafkaListener(topics = "bill_topic",groupId = "bill_groupId")
     public void topic_test(ConsumerRecord<?, ?> record, Acknowledgment ack, @Header(KafkaHeaders.RECEIVED_TOPIC) String topic) {
 
         Optional message = Optional.ofNullable(record.value());

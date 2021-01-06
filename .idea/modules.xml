@@ -7,6 +7,7 @@
       <module fileurl="file://$PROJECT_DIR$/spring-cloud-alibaba/c-auto-generator/c-auto-generator.iml" filepath="$PROJECT_DIR$/spring-cloud-alibaba/c-auto-generator/c-auto-generator.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-cloud-alibaba/c-big-data/c-big-data.iml" filepath="$PROJECT_DIR$/spring-cloud-alibaba/c-big-data/c-big-data.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-cloud-alibaba/c-cloud-business/c-cloud-business.iml" filepath="$PROJECT_DIR$/spring-cloud-alibaba/c-cloud-business/c-cloud-business.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-cloud-alibaba/c-cloud-business/c-data-center/c-data-center.iml" filepath="$PROJECT_DIR$/spring-cloud-alibaba/c-cloud-business/c-data-center/c-data-center.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-cloud-alibaba/c-cloud-business/c-demo-center/c-demo-center.iml" filepath="$PROJECT_DIR$/spring-cloud-alibaba/c-cloud-business/c-demo-center/c-demo-center.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-cloud-alibaba/c-gateway/c-gateway.iml" filepath="$PROJECT_DIR$/spring-cloud-alibaba/c-gateway/c-gateway.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-cloud-alibaba/c-cloud-business/c-search-center/c-search-center.iml" filepath="$PROJECT_DIR$/spring-cloud-alibaba/c-cloud-business/c-search-center/c-search-center.iml" />
