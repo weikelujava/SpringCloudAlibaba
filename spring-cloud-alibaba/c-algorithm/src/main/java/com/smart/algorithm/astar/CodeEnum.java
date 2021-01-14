@@ -1,7 +1,6 @@
 package com.smart.algorithm.astar;
 
 /**
- * All rights Reserved, Designed By http://www.hollysmart.com.cn
  *
  * @version V1.0
  * @title: CodesEnum
@@ -15,7 +14,6 @@ package com.smart.algorithm.astar;
 public enum CodeEnum {
 
     /**
-     * All rights Reserved, Designed By http://www.hollysmart.com.cn
      *
      * @version V1.0.0
      * @title: ErrorCodeEnum

@@ -11,7 +11,6 @@ import org.springframework.stereotype.Service;
 import java.util.Date;
 
 /**
- * All rights Reserved, Designed By http://www.hollysmart.com.cn
  *
  * @version V1.0
  * @title: UserServiceImpl

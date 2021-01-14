@@ -9,7 +9,6 @@ import org.apache.ibatis.annotations.SelectKey;
 import org.springframework.stereotype.Repository;
 
 /**
- * All rights Reserved, Designed By http://www.hollysmart.com.cn
  *
  * @version V1.0
  * @title: UserMapper

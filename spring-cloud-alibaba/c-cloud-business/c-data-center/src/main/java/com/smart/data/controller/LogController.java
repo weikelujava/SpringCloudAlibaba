@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.*;
 
 /**
- * All rights Reserved, Designed By http://www.hollysmart.com.cn
  *
  * @version V1.0
  * @title: LogController

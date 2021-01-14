@@ -4,7 +4,6 @@ import java.io.Serializable;
 import java.util.Objects;
 
 /**
- * All rights Reserved, Designed By http://www.hollysmart.com.cn
  *
  * @version V1.0
  * @title: Product

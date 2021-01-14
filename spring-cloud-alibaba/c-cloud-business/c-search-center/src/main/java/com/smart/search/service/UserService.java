@@ -3,7 +3,6 @@ package com.smart.search.service;
 import com.smart.search.bean.User;
 
 /**
- * All rights Reserved, Designed By http://www.hollysmart.com.cn
  *
  * @version V1.0
  * @title: UserService
