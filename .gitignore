@@ -1,39 +1,48 @@
-/lib/aopalliance-1.0.jar
-/lib/commons-logging-1.2.jar
-/lib/spring-aop-5.2.3.RELEASE.jar
-/lib/spring-aspects-5.2.3.RELEASE.jar
-/lib/spring-beans-5.2.3.RELEASE.jar
-/lib/spring-context-5.2.3.RELEASE.jar
-/lib/spring-context-support-5.2.3.RELEASE.jar
-/lib/spring-core-5.2.3.RELEASE.jar
-/lib/spring-expression-5.2.3.RELEASE.jar
-/lib/spring-instrument-5.2.3.RELEASE.jar
-/lib/spring-jdbc-5.2.3.RELEASE.jar
-/lib/spring-jms-5.2.3.RELEASE.jar
-/lib/spring-messaging-5.2.3.RELEASE.jar
-/lib/spring-orm-5.2.3.RELEASE.jar
-/lib/spring-oxm-5.2.3.RELEASE.jar
-/lib/spring-test-5.2.3.RELEASE.jar
-/lib/spring-tx-5.2.3.RELEASE.jar
-/spring-cloud-alibaba/c-gateway/target/classes/com/smart/gateway/GatewayApplication.class
-/spring-cloud-alibaba/c-gateway/target/classes/application.yml
-/spring-cloud-alibaba/c-gateway/target/maven-archiver/pom.properties
-/spring-cloud-alibaba/c-gateway/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst
-/spring-cloud-alibaba/c-gateway/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst
-/spring-cloud-alibaba/c-gateway/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst
-/spring-cloud-alibaba/c-gateway/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst
-/spring-cloud-alibaba/c-gateway/target/c-gateway-1.0.0.jar
-/spring-cloud-alibaba/cloud-business/c-user-center/target/classes/com/smart/user/controller/UserController.class
-/spring-cloud-alibaba/cloud-business/c-user-center/target/classes/com/smart/user/UserApplication.class
-/spring-cloud-alibaba/cloud-business/c-user-center/target/classes/application.yml
-/spring-cloud-alibaba/cloud-business/c-user-center/target/maven-archiver/pom.properties
-/spring-cloud-alibaba/cloud-business/c-user-center/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst
-/spring-cloud-alibaba/cloud-business/c-user-center/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst
-/spring-cloud-alibaba/cloud-business/c-user-center/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst
-/spring-cloud-alibaba/cloud-business/c-user-center/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst
-/spring-cloud-alibaba/cloud-business/c-user-center/target/c-user-center-1.0.0.jar
-/spring-cloud-alibaba/cloud-commons/target/maven-archiver/pom.properties
-/spring-cloud-alibaba/cloud-commons/target/cloud-commons-1.0.0.jar
-/spring-cloud-alibaba/cloud-config/target/classes/application.yml
-/spring-cloud-alibaba/cloud-config/target/maven-archiver/pom.properties
-/spring-cloud-alibaba/cloud-config/target/cloud-config-1.0.0.jar
+# OS
+.DS_Store
+[Tt]humbs.db
+
+# Compiled class file
+*.class
+target/
+build/
+out/
+
+# SVN
+.svn/
+
+# Log file
+logs/
+*.log
+
+# Idea
+.idea/
+*.iml
+
+# Eclipse
+.settings/
+.classpath
+.project
+.factorypath
+
+# MyEclipse
+.myeclipse/
+
+# Nodejs
+node_modules/
+
+# Vim
+.*.swp
+
+# BlueJ files
+*.ctxt
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# virtual machine crash logs
+hs_err_pid*
+
+# JRebel
+rebel.xml
+rebel-remote.xml
