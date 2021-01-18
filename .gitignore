@@ -46,3 +46,9 @@ hs_err_pid*
 # JRebel
 rebel.xml
 rebel-remote.xml
+### Example user template template
+### Example user template
+
+# IntelliJ project files
+out
+gen
