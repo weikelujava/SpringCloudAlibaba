@@ -13,7 +13,6 @@ import org.springframework.context.annotation.Configuration;
  * @date: 2021-01-25 14:15
  * @remark: 修改内容
  */
-@Configuration
 @ConfigurationProperties(prefix = "curator.zk")
 public class ZKConfig {
 

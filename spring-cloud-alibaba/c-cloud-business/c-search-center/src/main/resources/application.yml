@@ -5,6 +5,12 @@ spring:
   elasticsearch:
       rest:
         uris: ["http://10.2.9.150:9200","http://10.2.9.151:9200","http://10.2.9.152:9200"]
+  cloud:
+    nacos:
+      config:
+        server-addr: 127.0.0.1:8848
+        file-extension: yml
+
 
   data:
     elasticsearch:
