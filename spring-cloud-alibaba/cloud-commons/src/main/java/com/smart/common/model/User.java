@@ -3,7 +3,6 @@ package com.smart.common.model;
 import java.io.Serializable;
 
 /**
- * All rights Reserved, Designed By http://www.hollysmart.com.cn
  *
  * @version V1.0
  * @title: User

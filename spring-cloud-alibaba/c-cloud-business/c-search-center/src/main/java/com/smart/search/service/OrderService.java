@@ -3,7 +3,6 @@ package com.smart.search.service;
 import com.smart.common.model.Order;
 
 /**
- * All rights Reserved, Designed By http://www.hollysmart.com.cn
  *
  * @version V1.0
  * @title: OrderService

@@ -26,9 +26,41 @@ spring:
       maxPoolPreparedStatementPerConnectionSize: 20
       connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
 
+  rabbitmq:
+    addresses: 10.2.9.150:5672
+    username: root
+    password: 123456
+    connection-timeout: 15000
+    virtual-host: /t
+      # 确认消息已经发送到队列中
+    publisher-returns: true
+      # 确认消息已经发送到交换机中
+    template:
+        # 保证监听有效
+      mandatory: true
+    listener:
+      simple:
+          # 手动确认
+        acknowledge-mode: manual
+        # 同一个队列启动几个消费者
+        concurrency: 5
+        # 启动消费者最大数量
+        max-concurrency: 10
+      # 消息确认ACK机制
+    publisher-confirms: true
+
+  jackson:
+    default-property-inclusion: non_null
+
+
 
 logging:
   config: classpath:logback-spring.xml
+  level:
+    com:
+      alibaba:
+        nacos: ERROR
+
 
 ##自定义curator分布式锁配置
 
@@ -49,3 +81,5 @@ curator:
     # 连接超时时间
     connection-time-out: 5000
     product-lock-path: '/lock-path'
+
+

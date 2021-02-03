@@ -38,6 +38,7 @@
         <spring-jdbc.version>5.2.9.RELEASE</spring-jdbc.version>
         <mybatis-plus.version>3.4.0</mybatis-plus.version>
         <spring-kafka.version>2.2.11.RELEASE</spring-kafka.version>
+        <spring-boot-starter-amqp.version>2.2.10.RELEASE</spring-boot-starter-amqp.version>
         <fastjson.version>1.2.73</fastjson.version>
     </properties>
 
@@ -128,12 +129,21 @@
                 <version>${lombok.version}</version>
             </dependency>
 
+            <!--Kafka-->
             <dependency>
                 <groupId>org.springframework.kafka</groupId>
                 <artifactId>spring-kafka</artifactId>
                 <version>${spring-kafka.version}</version>
             </dependency>
 
+            <!--RabbitMQ-->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-amqp</artifactId>
+                <version>${spring-boot-starter-amqp.version}</version>
+            </dependency>
+
+            <!--FastJson-->
             <dependency>
                 <groupId>com.alibaba</groupId>
                 <artifactId>fastjson</artifactId>
