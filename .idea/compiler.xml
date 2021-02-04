@@ -20,8 +20,7 @@
         <module name="cloud-config" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="big-data" target="1.8" />
+    <bytecodeTargetLevel target="8">
       <module name="c-algorithm" target="1.8" />
       <module name="c-auto-generator" target="1.8" />
       <module name="c-big-data" target="1.8" />
@@ -35,12 +34,11 @@
       <module name="cloud-config" target="1.8" />
       <module name="cloud-gateway" target="1.8" />
       <module name="spring-cloud-alibaba" target="1.8" />
-      <module name="spring-cloud-alibaba (1)" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_STRING" value="-encoding utf-8" />
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="big-data" options="-parameters" />
       <module name="c-algorithm" options="-parameters" />
       <module name="c-auto-generator" options="-parameters" />
       <module name="c-big-data" options="-parameters" />
