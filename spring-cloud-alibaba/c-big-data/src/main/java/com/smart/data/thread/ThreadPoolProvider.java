@@ -9,7 +9,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 /**
  *
  * @version V1.0
- * @title: KafkaConsumer2
+ * @title: ThreadPoolProvider
  * @description:  线程池工具类
  * @author: lukewei
  * @date: 2021-01-04 17:34
