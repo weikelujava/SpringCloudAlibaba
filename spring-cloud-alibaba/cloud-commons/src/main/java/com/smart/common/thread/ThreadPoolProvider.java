@@ -1,4 +1,4 @@
-package com.smart.data.thread;
+package com.smart.common.thread;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -9,13 +9,12 @@ import java.util.concurrent.atomic.AtomicInteger;
 /**
  *
  * @version V1.0
- * @title: ThreadPoolProvider
+ * @title: KafkaConsumer2
  * @description:  线程池工具类
  * @author: lukewei
  * @date: 2021-01-04 17:34
  * @remark: 修改内容
  */
-@Slf4j
 public final class ThreadPoolProvider {
     private ThreadPoolProvider() {
     }
@@ -97,7 +96,6 @@ public final class ThreadPoolProvider {
 
         @Override
         public void rejectedExecution(Runnable r, ThreadPoolExecutor executor) {
-           log.info("New Thread begin run which thread is Rejected");
            ThreadPoolProvider.newFixedThreadPool().execute(r);
         }
     }
