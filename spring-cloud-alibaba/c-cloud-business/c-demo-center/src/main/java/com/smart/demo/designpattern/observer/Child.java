@@ -15,6 +15,7 @@ public class Child {
         observers.add(new Dog());
     }
 
+
     public boolean isCry(){
         return cry;
     }
