@@ -17,7 +17,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
  * @remark: 修改内容
  */
 @MapperScan(basePackages = "com.smart.search.mapper")
-@EnableDiscoveryClient
+//@EnableDiscoveryClient
 @EnableFeignClients(basePackages = "com.smart.search.feign")
 @SpringBootApplication(exclude = {DataSourceAutoConfiguration.class})
 public class SearchApplication {

@@ -99,4 +99,37 @@ public class RedisController {
         }
         log.info("------------------------------------------------------------");
     }
+
+
+    @RequestMapping("/hash/add")
+    public void hashAdd(){
+        redisTemplate.opsForHash().put(null,null,null);
+    }
+
+
+    public static void main(String[] args) {
+        Map<String,Object> map = new HashMap(2);
+        Map<String,Object> skuMap = new HashMap(2);
+
+        Map<String,Object> storeMap = new HashMap<>(2);
+        Map<String,Object> skuMap1 = new HashMap(2);
+        List<Map> list = new ArrayList<>(1);
+
+        skuMap.put("sku_id",1000);
+        skuMap.put("title","香蕉");
+        skuMap.put("real_price",2);
+        skuMap.put("status",0);
+        list.add(skuMap);
+
+        skuMap1.put("sku_id",1001);
+        skuMap1.put("title","苹果");
+        skuMap1.put("real_price",3);
+        skuMap1.put("status",1);
+        list.add(skuMap1);
+        storeMap.put("2000",list);
+        map.put("121314",storeMap);
+
+        System.out.println(map);
+    }
+
 }

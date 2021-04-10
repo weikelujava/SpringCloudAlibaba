@@ -15,7 +15,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class SpringTest {
 
     public static void main(String[] args) {
-        ApplicationContext context = new ClassPathXmlApplicationContext("application.xml");
+        ApplicationContext context = new ClassPathXmlApplicationContext("application-conf.xml");
         User user = context.getBean("user", User.class);
         System.out.println("name："+user.getName());
     }

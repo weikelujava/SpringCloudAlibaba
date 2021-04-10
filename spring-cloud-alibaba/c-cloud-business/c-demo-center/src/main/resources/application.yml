@@ -1,2 +1,37 @@
 server:
   port: 1314
+
+
+
+spring:
+  redis:
+    # host: 101.200.44.102
+    host: 127.0.0.1
+    #    password: m,[<}l;p1redis
+    #    password: ENC(+c+nf3G/lTDzh8PGuUmthQ+r64ZV5zdHQTWCFwkmxxrLOIXWWhGKQuYOTp1wIYBI)
+    port: 6379
+    # port: 6379
+    timeout: 5000
+    database: 0
+    lettuce:
+      pool:
+        max-active: 100
+        max-idle: 30
+        min-idle: 10
+        max-wait: 60s
+      shutdown-timeout: 100
+  #    cluster:
+  #      nodes:
+  #        # 集群模式没有找到能用的客户端工具，
+  #        # 手动查询可以需要redis-cli连接命令行查询
+  #        # -------------redis连接命令： redis-cli -c -h 10.2.9.150 -p 7001 -a 'm,[<}l;p1redis'
+  #        # 对应从节点为 10.2.9.151:7001
+  #        - 10.2.9.150:7001
+  ##        - 10.2.9.150:7002
+  #        # 对应从节点为 10.2.9.152:7001
+  #        - 10.2.9.151:7001
+  ##        - 10.2.9.151:7002
+  #        # 对应从节点为 10.2.9.150:7002
+  #        - 10.2.9.152:7001
+  ##        - 10.2.9.152:7002
+  #      max-redirects: 3
