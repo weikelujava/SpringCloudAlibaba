@@ -49,14 +49,14 @@ public class RedisController {
     public void zsetGetTest(){
 
         log.info("-------------------------------------------------");
-
-        Set<ZSetOperations.TypedTuple<Map<Integer, Integer>>> r4 = redisTemplate.opsForZSet().reverseRangeByScoreWithScores(ZSET_KEY, 0, System.currentTimeMillis(), 1, 2);
-        if(null != r4){
-            Iterator<ZSetOperations.TypedTuple<Map<Integer, Integer>>> iterator = r4.iterator();
-            if(iterator.hasNext()){
-                log.info("value:{},score:{}",iterator.next().getValue(),iterator.next().getScore());
-            }
-        }
+//
+//        Set<ZSetOperations.TypedTuple<Map<Integer, Integer>>> r4 = redisTemplate.opsForZSet().reverseRangeByScoreWithScores(ZSET_KEY, 0, System.currentTimeMillis(), 1, 2);
+//        if(null != r4){
+//            Iterator<ZSetOperations.TypedTuple<Map<Integer, Integer>>> iterator = r4.iterator();
+//            if(iterator.hasNext()){
+//                log.info("value:{},score:{}",iterator.next().getValue(),iterator.next().getScore());
+//            }
+//        }
 
 
         log.info("-------------------------------------------------");

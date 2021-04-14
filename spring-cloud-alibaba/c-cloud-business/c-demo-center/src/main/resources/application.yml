@@ -1,5 +1,7 @@
 server:
   port: 1314
+  servlet:
+    application-display-name: demo-application
 
 
 
