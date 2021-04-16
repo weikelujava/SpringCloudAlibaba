@@ -13,6 +13,7 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
+import java.util.concurrent.atomic.LongAdder;
 
 /**
  * @author weike
@@ -25,7 +26,7 @@ public class RedisController {
 
 
     @Resource
-    private RedisTemplate<String, Map<Integer, Integer>> redisTemplate;
+    private RedisTemplate<String, Object> redisTemplate;
 
 
     @GetMapping("/redis/add")
@@ -42,6 +43,16 @@ public class RedisController {
         Map<Integer,Integer> map2 = new HashMap<Integer, Integer>(1);
         map2.put(3001,3000);
         redisTemplate.opsForZSet().add(ZSET_KEY,map2,System.currentTimeMillis());
+
+
+    }
+
+    @GetMapping("/redis/set")
+    public void zsetSetTest() throws InterruptedException {
+        long begin = System.currentTimeMillis();
+
+        redisTemplate.opsForHash().put("hkey","key","value");
+        log.info("-----------------------------{}",System.currentTimeMillis()-begin);
 
     }
 
@@ -62,14 +73,15 @@ public class RedisController {
         log.info("-------------------------------------------------");
         Long count = redisTemplate.opsForZSet().count(ZSET_KEY, 0, System.currentTimeMillis());
         log.info("count:{}",count);
-        Set<Map<Integer, Integer>> r3 = redisTemplate.opsForZSet().reverseRangeByScore(ZSET_KEY, 0, System.currentTimeMillis(),0,4);
-        if(null != r3){
-            Iterator<Map<Integer, Integer>> iterator = r3.iterator();
-            while (iterator.hasNext()){
-                log.info("value:{}",iterator.next());
-            }
-        }
+//        Set<Map<Integer, Integer>> r3 = redisTemplate.opsForZSet().reverseRangeByScore(ZSET_KEY, 0, System.currentTimeMillis(),0,4);
+//        if(null != r3){
+//            Iterator<Map<Integer, Integer>> iterator = r3.iterator();
+//            while (iterator.hasNext()){
+//                log.info("value:{}",iterator.next());
+//            }
+//        }
         log.info("-------------------------------------------------");
+
 
 
 //        Set<Map<Integer, Integer>> r1 = redisTemplate.opsForZSet().range(ZSET_KEY, 0, -1);
@@ -90,4 +102,6 @@ public class RedisController {
 //            }
 //        }
     }
+
+
 }
