@@ -1,18 +1,24 @@
 package com.smart.demo.redis.controller;
 
 
+import com.smart.demo.redis.model.UserTest;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataAccessException;
+import org.springframework.data.redis.connection.RedisConnection;
+import org.springframework.data.redis.core.RedisCallback;
 import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.data.redis.core.ZSetOperations;
+import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Map;
-import java.util.Set;
+import java.lang.reflect.InvocationTargetException;
+import java.util.*;
+import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.LongAdder;
 
 /**
@@ -23,10 +29,50 @@ import java.util.concurrent.atomic.LongAdder;
 public class RedisController {
 
     private static final String ZSET_KEY = "zset_test";
+    private static final String HASH_KEY = "hash_test";
 
 
     @Resource
     private RedisTemplate<String, Object> redisTemplate;
+
+    @Resource
+    private StringRedisTemplate stringRedisTemplate;
+
+
+    @GetMapping("/redis/hash/add")
+    public void hashTest(){
+        redisTemplate.opsForHash().put(HASH_KEY+"1234","1000",true);
+        redisTemplate.opsForHash().put(HASH_KEY+"1234","1001",false);
+
+        redisTemplate.opsForZSet().add(HASH_KEY+"zset1001",3,System.currentTimeMillis());
+        redisTemplate.opsForZSet().add(HASH_KEY+"zset1001",4,System.currentTimeMillis());
+
+        redisTemplate.opsForList().leftPush(HASH_KEY+"123","1000");
+        redisTemplate.opsForList().leftPush(HASH_KEY+"123","1001");
+
+
+    }
+
+
+    @GetMapping("/redis/hash/test")
+    public void hashTest1(){
+        Map<Object, Object> entries = redisTemplate.opsForHash().entries(HASH_KEY + "1234");
+        Iterator<Map.Entry<Object, Object>> iterator = entries.entrySet().iterator();
+        while (true){
+            if(iterator.hasNext()){
+                Map.Entry<Object, Object> next = iterator.next();
+                String key =(String) next.getKey();
+                Set<Object> objects = redisTemplate.opsForZSet().rangeByScore(key, 0, System.currentTimeMillis());
+                objects.forEach((a)->{
+                    System.out.println(a.toString());
+                });
+                continue;
+            }
+                break;
+        }
+
+
+    }
 
 
     @GetMapping("/redis/add")
@@ -44,6 +90,10 @@ public class RedisController {
         map2.put(3001,3000);
         redisTemplate.opsForZSet().add(ZSET_KEY,map2,System.currentTimeMillis());
 
+        Map<Integer,Integer> map3 = new HashMap<Integer, Integer>(1);
+        map2.put(3001,3000);
+        redisTemplate.opsForValue().set("kab",map3);
+
 
     }
 
@@ -54,53 +104,80 @@ public class RedisController {
         redisTemplate.opsForHash().put("hkey","key","value");
         log.info("-----------------------------{}",System.currentTimeMillis()-begin);
 
+
     }
 
-    @GetMapping("/redis/get")
-    public void zsetGetTest(){
+    @GetMapping("/redis/hash/set")
+    public String zsetGetTest(){
 
-        log.info("-------------------------------------------------");
+        final String key = "test";
+        String name = "zhangsan";
+        UserTest  u1 = new UserTest();
+        u1.setScore(90);
+        u1.setSex("男");
+        this.redisTemplate.opsForHash().put(key,name,u1);
+        this.redisTemplate.expire(key,10, TimeUnit.MINUTES);
+        UserTest  u2 = new UserTest();
+        u2.setScore(75);
+        u2.setSex("女");
+        this.redisTemplate.opsForHash().put(key,"lisi",u2);
+        this.redisTemplate.expire(key,20, TimeUnit.MINUTES);
+
+        return "接口请求完成";
+//        if (!StringUtils.hasText(key)) {
+//            return;
+//        }
+//        redisTemplate.execute(new RedisCallback<Object>() {
+//            @Override
+//            public Object doInRedis(RedisConnection redisConnection) throws DataAccessException {
+//                byte[] lockBytes = redisTemplate.getStringSerializer().serialize(key);
+//                assert lockBytes != null;
+//                return redisConnection.setNX(lockBytes, lockBytes);
+//            }
+//        });
+
+
+    }
+
+    @GetMapping("/redis/hash/get")
+    public void zsetGetTest1() throws IllegalAccessException, InstantiationException, InvocationTargetException {
+
+//        List<Object> lists = redisTemplate.opsForHash().values("hash");
 //
-//        Set<ZSetOperations.TypedTuple<Map<Integer, Integer>>> r4 = redisTemplate.opsForZSet().reverseRangeByScoreWithScores(ZSET_KEY, 0, System.currentTimeMillis(), 1, 2);
-//        if(null != r4){
-//            Iterator<ZSetOperations.TypedTuple<Map<Integer, Integer>>> iterator = r4.iterator();
-//            if(iterator.hasNext()){
-//                log.info("value:{},score:{}",iterator.next().getValue(),iterator.next().getScore());
-//            }
-//        }
-
-
-        log.info("-------------------------------------------------");
-        Long count = redisTemplate.opsForZSet().count(ZSET_KEY, 0, System.currentTimeMillis());
-        log.info("count:{}",count);
-//        Set<Map<Integer, Integer>> r3 = redisTemplate.opsForZSet().reverseRangeByScore(ZSET_KEY, 0, System.currentTimeMillis(),0,4);
-//        if(null != r3){
-//            Iterator<Map<Integer, Integer>> iterator = r3.iterator();
-//            while (iterator.hasNext()){
-//                log.info("value:{}",iterator.next());
-//            }
-//        }
-        log.info("-------------------------------------------------");
-
-
-
-//        Set<Map<Integer, Integer>> r1 = redisTemplate.opsForZSet().range(ZSET_KEY, 0, -1);
-//        if(null != r1){
-//            Iterator<Map<Integer, Integer>> iterator = r1.iterator();
-//            while (iterator.hasNext()){
-//                log.info("r1:{}",iterator.next());
-//            }
-//        }
+//        List<UserTest> userTests = copyPropertiesBySpring(UserTest.class, lists);
+//        // 如果转成 List<UserTest>
 //
-//        log.info("-------------------------------------------------");
 //
-//        Set<ZSetOperations.TypedTuple<Map<Integer, Integer>>> typedTuples = redisTemplate.opsForZSet().rangeWithScores(ZSET_KEY, 0, -1);
-//        if(null != typedTuples){
-//            Iterator<ZSetOperations.TypedTuple<Map<Integer, Integer>>> iterator = typedTuples.iterator();
-//            while (iterator.hasNext()){
-//                log.info("value:{},score:{}",iterator.next().getValue(),iterator.next().getScore());
-//            }
+//        for (UserTest list : userTests) {
+//            System.out.println(list);
 //        }
+        // -2 不存在 , -1 存在
+        Long test = redisTemplate.getExpire("test");
+        System.out.println(test);
+
+
+//        Object abcd = redisTemplate.execute(new RedisCallback<Object>() {
+//            @Override
+//            public Object doInRedis(RedisConnection redisConnection) throws DataAccessException {
+//                byte[] lockBytes = redisTemplate.getStringSerializer().serialize("test");
+//                assert lockBytes != null;
+//                return redisConnection.setNX(lockBytes, lockBytes);
+//            }
+//        });
+//        System.out.println(abcd);
+
+    }
+
+
+    public static <T> List<T> copyPropertiesBySpring(Class<T> targetClazz, List<Object> sources)
+            throws IllegalAccessException, InstantiationException {
+        List<T> targets = new ArrayList<T>(sources.size());
+        for(Object source: sources){
+            T target = targetClazz.newInstance();
+            BeanUtils.copyProperties(source, target);
+            targets.add(target);
+        }
+        return targets;
     }
 
 

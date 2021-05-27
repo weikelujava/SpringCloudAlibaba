@@ -18,7 +18,7 @@ public class AStarTest {
      * @param args
      */
     public static void main(String[] args) {
-        int[][] maps = {
+        int[][] maps = { // x
                 { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
                 { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
                 { 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0 },
@@ -29,7 +29,7 @@ public class AStarTest {
         };
 
         // ***** 从地图中1x1的位置开始，终点位置为4x5位置，0代表通路，1代表障碍物
-        MapInfo info=new MapInfo(maps,maps[0].length, maps.length,new Node(1, 1), new Node(4, 5));
+        MapInfo info=new MapInfo(maps,maps[0].length, maps.length,new Node(0, 0), new Node(11, 5));
         new AStar().start(info);
         printMap(maps);
     }

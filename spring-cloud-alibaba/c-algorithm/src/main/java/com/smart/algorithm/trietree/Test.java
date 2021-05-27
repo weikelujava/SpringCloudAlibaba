@@ -30,11 +30,11 @@ public class Test {
 
           if(null != sensitiveWords && !sensitiveWords.isEmpty()){
               for (String sensitiveWord : sensitiveWords) {
-                  String replace = "";
+                  StringBuilder replace = new StringBuilder();
                   for (int i = 0; i < sensitiveWord.length(); i++) {
-                      replace += "*";
+                      replace.append("*");
                   }
-                 str = str.replace(trieUtil.getContainsItem(str), replace);
+                 str = str.replace(trieUtil.getContainsItem(str), replace.toString());
               }
           }
             System.out.println(str);

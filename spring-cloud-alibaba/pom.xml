@@ -29,7 +29,7 @@
         <spring-cloud-alibaba-dependencies.version>2.1.2.RELEASE</spring-cloud-alibaba-dependencies.version>
         <spring-boot-starter-web.version>2.2.5.RELEASE</spring-boot-starter-web.version>
         <lombok.version>1.18.12</lombok.version>
-        <spring-boot-maven-plugin.version>2.2.5.RELEASE</spring-boot-maven-plugin.version>
+        <spring-boot-maven-plugin.version>2.0.3.RELEASE</spring-boot-maven-plugin.version>
         <spring-cloud-starter-gateway.version>2.2.5.RELEASE</spring-cloud-starter-gateway.version>
         <spring-boot-starter-data-elasticesearch.version>2.1.16.RELEASE</spring-boot-starter-data-elasticesearch.version>
         <spring-boot-configuration-processor.version>2.1.16.RELEASE</spring-boot-configuration-processor.version>
@@ -40,6 +40,7 @@
         <spring-kafka.version>2.2.11.RELEASE</spring-kafka.version>
         <spring-boot-starter-amqp.version>2.2.10.RELEASE</spring-boot-starter-amqp.version>
         <fastjson.version>1.2.73</fastjson.version>
+        <spring-boot-starter-data-jap.version>2.4.4</spring-boot-starter-data-jap.version>
     </properties>
 
 
@@ -157,6 +158,14 @@
                 <artifactId>jol-core</artifactId>
                 <version>0.14</version>
             </dependency>
+
+            <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-data-jpa -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-data-jpa</artifactId>
+                <version>${spring-boot-starter-data-jap.version}</version>
+            </dependency>
+
 
         </dependencies>
     </dependencyManagement>
