@@ -18,13 +18,16 @@ public class PlatformCoupon implements Serializable {
 
     private List<String> used = new ArrayList<>(1);
 
+    private String productCode;
+
     public PlatformCoupon() {
     }
 
-    public PlatformCoupon(String couponCode, Long amount, List<String> used) {
+    public PlatformCoupon(String couponCode, Long amount, List<String> used,String productCode) {
         this.couponCode = couponCode;
         this.amount = amount;
         this.used = used;
+        this.productCode = productCode;
     }
 
     public String getCouponCode() {
@@ -51,12 +54,21 @@ public class PlatformCoupon implements Serializable {
         this.used = used;
     }
 
+    public String getProductCode() {
+        return productCode;
+    }
+
+    public void setProductCode(String productCode) {
+        this.productCode = productCode;
+    }
+
     @Override
     public String toString() {
         return "PlatformCoupon{" +
                 "couponCode='" + couponCode + '\'' +
                 ", amount=" + amount +
                 ", used=" + used +
+                ", productCode=" + productCode +
                 '}';
     }
 }

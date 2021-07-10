@@ -75,10 +75,10 @@ public class CouponCalculator {
 
         }};
     private static List<PlatformCoupon> platformCoupons = new ArrayList(){{
-        add(new PlatformCoupon("A", 20L, Arrays.asList("TF", "GL", "SS")));
-        add(new PlatformCoupon("B", 30L, Arrays.asList("GL", "SS")));
-        add(new PlatformCoupon("C", 40L, Arrays.asList("TF", "SS")));
-        add(new PlatformCoupon("D", 60L, Collections.singletonList("SS")));
+        add(new PlatformCoupon("A", 20L, Arrays.asList("TF", "GL", "SS"),""));
+        add(new PlatformCoupon("B", 30L, Arrays.asList("GL", "SS"),""));
+        add(new PlatformCoupon("C", 40L, Arrays.asList("TF", "SS"),""));
+        add(new PlatformCoupon("D", 60L, Collections.singletonList("SS"),""));
     }};
 
     /**

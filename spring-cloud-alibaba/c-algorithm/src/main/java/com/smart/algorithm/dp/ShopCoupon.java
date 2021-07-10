@@ -31,13 +31,20 @@ public class ShopCoupon implements Serializable {
     private String shopCode;
 
 
-    public ShopCoupon(String s, long l, boolean b, String tf) {
+    /**
+     * 商品编号
+     */
+    private String productCode;
+
+
+    public ShopCoupon(String s, long l, boolean b, String tf,String productCode) {
     }
 
-    public ShopCoupon(String couponCode, Long amount, boolean flag) {
+    public ShopCoupon(String couponCode, Long amount, boolean flag,String productCode) {
         this.couponCode = couponCode;
         this.amount = amount;
         this.flag = flag;
+        this.productCode = productCode;
     }
 
     public String getCouponCode() {
@@ -69,6 +76,14 @@ public class ShopCoupon implements Serializable {
         return shopCode;
     }
 
+    public String getProductCode() {
+        return productCode;
+    }
+
+    public void setProductCode(String productCode) {
+        this.productCode = productCode;
+    }
+
     public void setShopCode(String shopCode) {
         this.shopCode = shopCode;
     }
@@ -80,6 +95,7 @@ public class ShopCoupon implements Serializable {
                 ", amount=" + amount +
                 ", flag=" + flag +
                 ", shopCode=" + shopCode +
+                ", productCode=" + productCode +
                 '}';
     }
 }
