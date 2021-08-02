@@ -39,6 +39,7 @@
         <mybatis-plus.version>3.4.0</mybatis-plus.version>
         <spring-kafka.version>2.2.11.RELEASE</spring-kafka.version>
         <spring-boot-starter-amqp.version>2.2.10.RELEASE</spring-boot-starter-amqp.version>
+        <rocketmq-spring-boot-starter.version>2.2.0</rocketmq-spring-boot-starter.version>
         <fastjson.version>1.2.73</fastjson.version>
         <spring-boot-starter-data-jap.version>2.4.4</spring-boot-starter-data-jap.version>
     </properties>
@@ -142,6 +143,13 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-amqp</artifactId>
                 <version>${spring-boot-starter-amqp.version}</version>
+            </dependency>
+
+            <!-- https://mvnrepository.com/artifact/org.apache.rocketmq/rocketmq-spring-boot-starter -->
+            <dependency>
+                <groupId>org.apache.rocketmq</groupId>
+                <artifactId>rocketmq-spring-boot-starter</artifactId>
+                <version>${rocketmq-spring-boot-starter.version}</version>
             </dependency>
 
             <!--FastJson-->

@@ -7,9 +7,9 @@ spring:
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     driver-class-name: com.mysql.cj.jdbc.Driver
-    password: m,[<}L;p1mysqlcy
-    url: jdbc:mysql://10.2.9.151:3306/test?useUnicode=true&characterEncoding=UTF8&serverTimezone=Asia/Shanghai&useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true&autoReconnect=true
-    username: bjparkcy
+    password: root
+    url: jdbc:mysql://127.0.0.1:3306/test?useUnicode=true&characterEncoding=UTF8&serverTimezone=Asia/Shanghai&useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true&autoReconnect=true
+    username: root
     druid:
       filters: stat,wall,slf4j
       initialSize: 5
@@ -52,7 +52,14 @@ spring:
   jackson:
     default-property-inclusion: non_null
 
-
+# rocketMq
+rocketmq:
+  name-server: 192.168.19.130:9876
+  producer:
+    # 自定义组名
+    group: 'demo_topic'
+    # 消息发送超时时间
+    send-message-timeout: 5000
 
 logging:
   config: classpath:logback-spring.xml
